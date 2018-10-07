@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Tabs, Tab } from 'react-bootstrap'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reloadz.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+          <Tab eventKey={1} title="Request">
+            Request Fields
+          </Tab>
+          <Tab eventKey={2} title="Response">
+            Response Fields
+          </Tab>
+          <Tab eventKey={3} title="Settings" disabled>
+            Settings Fields
+          </Tab>
+        </Tabs>
       </div>
     );
   }
